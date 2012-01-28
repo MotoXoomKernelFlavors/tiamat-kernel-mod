@@ -199,9 +199,8 @@ ARCH		?= arm
 #CROSS_COMPILE	?= /opt/toolchains/arm-2009q3_arm/bin/arm-none-eabi-
 #CROSS_COMPILE   ?= /opt/toolchains/android-toolchain-eabi_4.5-2011.07/bin/arm-eabi-
 #CROSS_COMPILE   ?= /opt/toolchains/android-toolchain-eabi_4.5-2011.08/bin/arm-eabi-
-#CROSS_COMPILE   ?= /opt/toolchains/android-toolchain-eabi_4.5-2011.09/bin/arm-eabi-
+CROSS_COMPILE   ?= /opt/toolchains/android-toolchain-eabi_4.5-2011.09/bin/arm-eabi-
 #CROSS_COMPILE   ?= /opt/toolchains/android-toolchain-eabi_4.6-2011.07/bin/arm-eabi-
-CROSS_COMPILE   ?= /opt/toolchains/android-toolchain-eabi_4.6-2012.01/bin/arm-eabi-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
