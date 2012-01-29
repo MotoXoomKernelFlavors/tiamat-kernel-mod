@@ -44,5 +44,5 @@ const char linux_banner[] =
 
 const char linux_proc_banner[] =
 	"%s version %s"
-	" (Tiamat-3.0.0-mod2)"
+	" (Tiamat-3.0.0-mod3)"
 	" (" LINUX_COMPILER ") %s\n";
