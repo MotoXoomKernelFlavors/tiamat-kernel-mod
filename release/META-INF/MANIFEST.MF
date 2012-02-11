@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+
+Name: installer/mkbootimg
+SHA1-Digest: rWB5UCsYU2/dziGS5JHiIlhkk20=
+
+Name: system/xbin/busybox
+SHA1-Digest: LFZLf7Z02IZ+C6/KUyd4XRhdEg0=
+
+Name: system/lib/modules/scsi_wait_scan.ko
+SHA1-Digest: C0sY6tww8ZbtunAPbt//erfnbSU=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: eP5fIQDnRpyGai5Kz7eQIfodMUs=
+
+Name: installer/install.sh
+SHA1-Digest: rNtxE9Os1KO9cwmWmicZ3BZgFaI=
+
+Name: installer/dd
+SHA1-Digest: +QoND/lEYluIaKn7rAgttHdyvPM=
+
+Name: installer/zImage
+SHA1-Digest: zLIfWRsY4NEaNNUblay5nNthP9A=
+
+Name: installer/unpackbootimg
+SHA1-Digest: /z1kC+ZDIQ74SntWq9BbZBqMDqQ=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: PAic2BzkTdHmhC97n0WrTaDLW04=
+
+Name: system/lib/modules/cifs.ko
+SHA1-Digest: +/ad/Bci1SqiD6WQPmlR4pKRIzk=
+
+Name: installer/sysinit
+SHA1-Digest: oS0APnQo/APgW2HrdKpI5noHETQ=
+
