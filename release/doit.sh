@@ -17,6 +17,7 @@ REL=ICS_${TYPE}_$(date +%Y%m%d)_Platypus_for_Xoom_${RELVER}.zip
 
 echo "removing old kernel modules"
 rm release/system/lib/modules/*
+echo "done ..."
 echo "				"
 ### rm -r release/system 2> /dev/null
 #mkdir  -p release/system/bin || exit 1
@@ -27,10 +28,12 @@ echo "				"
 
 echo "copying over new kernel modules"
 find . -name "*.ko" -exec cp {} release/system/lib/modules/ \; 2>/dev/null || exit 1
+echo "done ..."
 echo "				"
 
-echo "removing old kernel"
-rm release/installer/zImage
+echo "copying over new kernel to prepare for packaging"
+cp arch/arm/boot/zImage release/installer/zImage
+echo "done ..."
 echo "				"
 
 echo "now in fact putting all in a cwm zip-package"
