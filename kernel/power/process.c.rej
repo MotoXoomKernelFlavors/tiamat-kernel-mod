@@ -1,0 +1,11 @@
+--- kernel/power/process.c	2011-05-19 06:06:34.000000000 +0200
++++ kernel/power/process.c	2011-06-21 13:54:45.200007139 +0200
+@@ -89,7 +96,7 @@
+ 			todo += wq_busy;
+ 		}
+ 
+-		if (!todo || time_after(jiffies, end_time))
++		if (!todo || timedout)
+ 			break;
+ 
+ 		if (pm_wakeup_pending()) {

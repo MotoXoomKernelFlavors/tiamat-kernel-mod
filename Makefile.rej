@@ -1,0 +1,15 @@
+--- Makefile	2011-08-24 01:10:27.537276066 +0200
++++ Makefile	2011-08-24 23:48:29.499521066 +0200
+@@ -357,10 +358,12 @@
+ KBUILD_CPPFLAGS := -D__KERNEL__
+ 
+ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
++		   -W -Wno-unused-parameter -Wno-missing-field-initializers \
+ 		   -fno-strict-aliasing -fno-common \
+ 		   -Werror-implicit-function-declaration \
+ 		   -Wno-format-security \
+ 		   -fno-delete-null-pointer-checks
++KBUILD_CFLAGS   += $(call cc-option, -Wno-empty-body)
+ KBUILD_AFLAGS_KERNEL :=
+ KBUILD_CFLAGS_KERNEL :=
+ KBUILD_AFLAGS   := -D__ASSEMBLY__
