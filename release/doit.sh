@@ -13,7 +13,7 @@ TYPE=$1
 RELVER=$2
 [[ "$RELVER" == '' ]] && RELVER="r6"
 
-REL=ICS_${TYPE}_$(date +%Y%m%d)_Platypus_for_Xoom_${RELVER}.zip
+REL=ICS_$(date +%Y%m%d)_Platypus_for_${TYPE}_${RELVER}.zip
 
 echo "removing old kernel modules"
 rm release/system/lib/modules/*
