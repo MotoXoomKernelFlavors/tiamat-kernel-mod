@@ -286,7 +286,7 @@ static void l2x0_disable(void)
 	spin_unlock_irqrestore(&l2x0_lock, flags);
 }
 
-static u32 l2x0_saved_context[4];
+static u32 l2x0_saved_context[6];
 
 void l2x0_save(void)
 {
@@ -295,6 +295,8 @@ void l2x0_save(void)
 	l2x0_saved_context[i++] = readl_relaxed(l2x0_base + L2X0_TAG_LATENCY_CTRL);
 	l2x0_saved_context[i++] = readl_relaxed(l2x0_base + L2X0_AUX_CTRL);
 	l2x0_saved_context[i++] = readl_relaxed(l2x0_base + L2X0_CTRL);
+	l2x0_saved_context[i++] = readl_relaxed(l2x0_base + L2X0_PREFETCH_CTRL);
+	l2x0_saved_context[i++] = readl_relaxed(l2x0_base + L2X0_POWER_CTRL);
 	BUG_ON(i != ARRAY_SIZE(l2x0_saved_context));
 }
 
@@ -305,6 +307,8 @@ void l2x0_restore(void)
 	writel_relaxed(l2x0_saved_context[i++], l2x0_base + L2X0_TAG_LATENCY_CTRL);
 	writel_relaxed(l2x0_saved_context[i++], l2x0_base + L2X0_AUX_CTRL);
 	writel_relaxed(l2x0_saved_context[i++], l2x0_base + L2X0_CTRL);
+	writel_relaxed(l2x0_saved_context[i++], l2x0_base + L2X0_PREFETCH_CTRL);
+	writel_relaxed(l2x0_saved_context[i++], l2x0_base + L2X0_POWER_CTRL);
 	BUG_ON(i != ARRAY_SIZE(l2x0_saved_context));
 }
 
